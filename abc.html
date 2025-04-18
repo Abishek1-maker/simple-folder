@@ -7,20 +7,41 @@
     <link rel="stylesheet" href="./abc.css">
 </head>
 <body>
-    <fieldset style=" justify-content: center; ; align-items: center;margin:200px auto;height: 25vh; width: fit-content;">
-        <legend>Sign Up</legend>
+    <fieldset style="border-radius: 6px;box-shadow: black 0px 0px 10px; justify-content: center; ; align-items: center;margin:150px auto;height: 45vh; width: fit-content;">
+        <legend style="font-size: x-large;color: rgb(42, 41, 39);text-shadow: 3px 3px 3px">Sign Up</legend>
     <form id="form" >
         <fieldset id="f1">
-          <legend><label for="email">Email</label></legend>
+          <legend id="legend"><label for="email">Email</label></legend>
           <input type="email" id="email" name="email" placeholder="Enter your email">
         </fieldset>
       
         <fieldset id="f1">
-          <legend><label for="password">Password</label></legend>
+          <legend id="legend"><label for="password">Password</label></legend>
           <input type="password" id="password" name="password" placeholder="Enter your password">
         </fieldset>
+        
+        <hr style="width: 300px; height: 2px; background-color: rgb(192, 197, 209); border: none; margin-top: 10px;">
+        <button type="submit" id='button' style="background-color: rgb(0, 76, 255);color: white;width: 300px;outline: none;height: 40px;cursor: pointer;border-color: rgb(6, 29, 176);">Login</button>
     </fieldset>
       </form>
+      <p style="font-size:x-large; margin: -130px 0px 0px 90px;">Detail:<span id="detail"></span></p>
+      <script>
+  
+    const email=document.getElementById("email");
+    const password=document.getElementById("password");
+   const button=document.getElementById("button");
+   button.addEventListener("click",()=>{
+    if(email.value=="" || password.value==""){
+        alert("Please fill all the fields")
+    }
+   
+    else{
+        alert("Login Successful")
+        document.getElementById("detail").innerHTML=`<br> Email: ${email.value} <br> Password: ${password.value}`
+    }
+   })
+   
+      </script>
       
 </body>
-</html></fieldset>
+</html>
