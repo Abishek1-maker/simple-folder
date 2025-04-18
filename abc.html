@@ -30,7 +30,8 @@
     const email=document.getElementById("email");
     const password=document.getElementById("password");
    const button=document.getElementById("button");
-   button.addEventListener("click",()=>{
+   button.addEventListener("click",(e)=>{
+    e.preventDefault();
     if(email.value=="" || password.value==""){
         alert("Please fill all the fields")
     }
