@@ -1,0 +1,32 @@
+body{
+   
+    background-color: hsl(200, 71%, 53%);
+}
+#form{
+display: flex;
+align-items: center;
+flex-direction: column;
+margin-top: 20px;
+
+}
+#f1{
+    border-color: blue;
+    border-radius: 20px;
+    width: 300px;
+}
+legend:hover{
+    color: white;
+    text-shadow: rgb(203, 19, 37) 0px 0px 10px;
+
+}
+#email,#password{
+    border-radius: 3px;
+    border-width: 1px;
+    border-color: rgb(212, 211, 208);
+    
+}
+#email:focus,#password:focus {
+ outline: none;
+border-color: blue;
+  box-shadow: blue 0px 0 px 5px;
+}
